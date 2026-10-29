@@ -1,8 +1,14 @@
 target/
 *.class
 .idea/
+.vscode/
 *.iml
 *.iws
 *.ipr
 .DS_Store
 veri/
+*.zip
+*.rar
+proje_takimi.txt
+SUNUM_REHBERI.md
+teslimat_paketi_olustur.ps1

@@ -1,0 +1,326 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1480 1150" width="100%" height="100%" style="background-color: #0f172a; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;">
+  <defs>
+    <linearGradient id="headerGradModels" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <linearGradient id="headerGradPatterns" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a5f"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="headerGradServices" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14532d"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+    <linearGradient id="headerGradIo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#701a75"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="headerGradUi" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c2d12"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#94a3b8" />
+    </marker>
+    <marker id="inherits" viewBox="0 0 12 12" refX="12" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <polygon points="0,1 12,6 0,11" fill="#0f172a" stroke="#38bdf8" stroke-width="1.8" />
+    </marker>
+    <marker id="implements" viewBox="0 0 12 12" refX="12" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <polygon points="0,1 12,6 0,11" fill="#0f172a" stroke="#c084fc" stroke-width="1.8" />
+    </marker>
+  </defs>
+
+  <!-- Title Banner -->
+  <rect x="30" y="20" width="1420" height="60" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1.5" filter="url(#shadow)" />
+  <text x="50" y="58" fill="#f8fafc" font-size="22" font-weight="bold">Akıllı Kampüs Ders Programı Sistemi — UML Sınıf Diyagramı</text>
+  <text x="1100" y="57" fill="#38bdf8" font-size="14" font-weight="600">Aşama 4: Kontrol ve Güvence (Arda - Test ve Kalite)</text>
+
+  <!-- Package Background Boxes -->
+  <!-- Models Box -->
+  <rect x="30" y="100" width="790" height="990" rx="14" fill="#0b1120" stroke="#334155" stroke-dasharray="5 5" stroke-width="1.5"/>
+  <text x="50" y="128" fill="#94a3b8" font-size="14" font-weight="bold" letter-spacing="1">PACKAGE: models</text>
+
+  <!-- Patterns Box -->
+  <rect x="840" y="100" width="280" height="540" rx="14" fill="#0b1120" stroke="#1d4ed8" stroke-dasharray="5 5" stroke-width="1.5"/>
+  <text x="860" y="128" fill="#60a5fa" font-size="14" font-weight="bold" letter-spacing="1">PACKAGE: patterns</text>
+
+  <!-- IO Box -->
+  <rect x="1140" y="100" width="310" height="540" rx="14" fill="#0b1120" stroke="#a21caf" stroke-dasharray="5 5" stroke-width="1.5"/>
+  <text x="1160" y="128" fill="#e879f9" font-size="14" font-weight="bold" letter-spacing="1">PACKAGE: io</text>
+
+  <!-- Services Box -->
+  <rect x="840" y="660" width="610" height="430" rx="14" fill="#0b1120" stroke="#15803d" stroke-dasharray="5 5" stroke-width="1.5"/>
+  <text x="860" y="688" fill="#4ade80" font-size="14" font-weight="bold" letter-spacing="1">PACKAGE: services &amp; ui</text>
+
+  <!-- ==================== CLASSES ==================== -->
+
+  <!-- Kullanici (Abstract) -->
+  <g transform="translate(50, 150)" filter="url(#shadow)">
+    <rect width="210" height="130" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+    <path d="M 0,8 Q 0,0 8,0 L 202,0 Q 210,0 210,8 L 210,34 L 0,34 Z" fill="url(#headerGradModels)" />
+    <text x="105" y="16" fill="#94a3b8" font-size="10" font-style="italic" text-anchor="middle">&lt;&lt;abstract&gt;&gt;</text>
+    <text x="105" y="29" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">Kullanici</text>
+    <line x1="0" y1="34" x2="210" y2="34" stroke="#475569" stroke-width="1"/>
+    <text x="12" y="52" fill="#cbd5e1" font-size="11">- adSoyad: String</text>
+    <text x="12" y="68" fill="#cbd5e1" font-size="11">- sicilNo: String</text>
+    <line x1="0" y1="78" x2="210" y2="78" stroke="#334155" stroke-width="1"/>
+    <text x="12" y="96" fill="#93c5fd" font-size="11">+ getAdSoyad(): String</text>
+    <text x="12" y="112" fill="#93c5fd" font-size="11">+ getSicilNo(): String</text>
+  </g>
+
+  <!-- OgretimElemani -->
+  <g transform="translate(50, 340)" filter="url(#shadow)">
+    <rect width="210" height="145" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+    <path d="M 0,8 Q 0,0 8,0 L 202,0 Q 210,0 210,8 L 210,30 L 0,30 Z" fill="url(#headerGradModels)" />
+    <text x="105" y="21" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">OgretimElemani</text>
+    <line x1="0" y1="30" x2="210" y2="30" stroke="#38bdf8" stroke-width="1"/>
+    <text x="12" y="48" fill="#cbd5e1" font-size="11">- unvan: String</text>
+    <text x="12" y="64" fill="#cbd5e1" font-size="11">- bolum: String</text>
+    <line x1="0" y1="74" x2="210" y2="74" stroke="#334155" stroke-width="1"/>
+    <text x="12" y="92" fill="#93c5fd" font-size="11">+ getUnvan(): String</text>
+    <text x="12" y="108" fill="#93c5fd" font-size="11">+ getBolum(): String</text>
+    <text x="12" y="124" fill="#93c5fd" font-size="11">+ setUnvan(s: String): void</text>
+  </g>
+
+  <!-- Derslik (Abstract) -->
+  <g transform="translate(50, 560)" filter="url(#shadow)">
+    <rect width="250" height="150" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+    <path d="M 0,8 Q 0,0 8,0 L 242,0 Q 250,0 250,8 L 250,34 L 0,34 Z" fill="url(#headerGradModels)" />
+    <text x="125" y="16" fill="#94a3b8" font-size="10" font-style="italic" text-anchor="middle">&lt;&lt;abstract&gt;&gt;</text>
+    <text x="125" y="29" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">Derslik</text>
+    <line x1="0" y1="34" x2="250" y2="34" stroke="#475569" stroke-width="1"/>
+    <text x="12" y="52" fill="#cbd5e1" font-size="11">- derslikKodu: String</text>
+    <text x="12" y="68" fill="#cbd5e1" font-size="11">- kapasite: int</text>
+    <line x1="0" y1="78" x2="250" y2="78" stroke="#334155" stroke-width="1"/>
+    <text x="12" y="96" fill="#fdba74" font-size="11" font-style="italic">+ uygunMu(sayi, lab)*: boolean</text>
+    <text x="12" y="114" fill="#93c5fd" font-size="11">+ getDerslikKodu(): String</text>
+    <text x="12" y="130" fill="#93c5fd" font-size="11">+ getKapasite(): int</text>
+  </g>
+
+  <!-- Amfi -->
+  <g transform="translate(50, 780)" filter="url(#shadow)">
+    <rect width="180" height="95" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+    <path d="M 0,8 Q 0,0 8,0 L 172,0 Q 180,0 180,8 L 180,30 L 0,30 Z" fill="url(#headerGradModels)" />
+    <text x="90" y="21" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">Amfi</text>
+    <line x1="0" y1="30" x2="180" y2="30" stroke="#38bdf8" stroke-width="1"/>
+    <text x="10" y="52" fill="#94a3b8" font-size="11" font-style="italic">Polymorphic Subclass</text>
+    <line x1="0" y1="60" x2="180" y2="60" stroke="#334155" stroke-width="1"/>
+    <text x="10" y="78" fill="#38bdf8" font-size="11">+ uygunMu(): boolean</text>
+  </g>
+
+  <!-- Laboratuvar -->
+  <g transform="translate(250, 780)" filter="url(#shadow)">
+    <rect width="180" height="95" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+    <path d="M 0,8 Q 0,0 8,0 L 172,0 Q 180,0 180,8 L 180,30 L 0,30 Z" fill="url(#headerGradModels)" />
+    <text x="90" y="21" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">Laboratuvar</text>
+    <line x1="0" y1="30" x2="180" y2="30" stroke="#38bdf8" stroke-width="1"/>
+    <text x="10" y="52" fill="#94a3b8" font-size="11" font-style="italic">Polymorphic Subclass</text>
+    <line x1="0" y1="60" x2="180" y2="60" stroke="#334155" stroke-width="1"/>
+    <text x="10" y="78" fill="#38bdf8" font-size="11">+ uygunMu(): boolean</text>
+  </g>
+
+  <!-- Ders -->
+  <g transform="translate(310, 320)" filter="url(#shadow)">
+    <rect width="250" height="175" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+    <path d="M 0,8 Q 0,0 8,0 L 242,0 Q 250,0 250,8 L 250,30 L 0,30 Z" fill="url(#headerGradModels)" />
+    <text x="125" y="21" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">Ders</text>
+    <line x1="0" y1="30" x2="250" y2="30" stroke="#475569" stroke-width="1"/>
+    <text x="12" y="48" fill="#cbd5e1" font-size="11">- dersKodu: String</text>
+    <text x="12" y="64" fill="#cbd5e1" font-size="11">- dersAdi: String</text>
+    <text x="12" y="80" fill="#cbd5e1" font-size="11">- sorumluHoca: OgretimElemani</text>
+    <text x="12" y="96" fill="#cbd5e1" font-size="11">- ogrenciSayisi: int</text>
+    <text x="12" y="112" fill="#cbd5e1" font-size="11">- laboratuvarGerekliMi: boolean</text>
+    <line x1="0" y1="120" x2="250" y2="120" stroke="#334155" stroke-width="1"/>
+    <text x="12" y="138" fill="#93c5fd" font-size="11">+ getDersKodu(): String</text>
+    <text x="12" y="154" fill="#93c5fd" font-size="11">+ isLaboratuvarGerekliMi(): boolean</text>
+  </g>
+
+  <!-- ZamanDilimi -->
+  <g transform="translate(590, 320)" filter="url(#shadow)">
+    <rect width="210" height="135" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+    <path d="M 0,8 Q 0,0 8,0 L 202,0 Q 210,0 210,8 L 210,30 L 0,30 Z" fill="url(#headerGradModels)" />
+    <text x="105" y="21" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">ZamanDilimi</text>
+    <line x1="0" y1="30" x2="210" y2="30" stroke="#475569" stroke-width="1"/>
+    <text x="12" y="48" fill="#cbd5e1" font-size="11">- gun: String</text>
+    <text x="12" y="64" fill="#cbd5e1" font-size="11">- saatAraligi: String</text>
+    <line x1="0" y1="74" x2="210" y2="74" stroke="#334155" stroke-width="1"/>
+    <text x="12" y="92" fill="#93c5fd" font-size="11">+ getGun(): String</text>
+    <text x="12" y="108" fill="#93c5fd" font-size="11">+ getSaatAraligi(): String</text>
+    <text x="12" y="124" fill="#93c5fd" font-size="11">+ toString(): String</text>
+  </g>
+
+  <!-- AtamaKaydi -->
+  <g transform="translate(480, 560)" filter="url(#shadow)">
+    <rect width="250" height="150" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+    <path d="M 0,8 Q 0,0 8,0 L 242,0 Q 250,0 250,8 L 250,30 L 0,30 Z" fill="url(#headerGradModels)" />
+    <text x="125" y="21" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">AtamaKaydi</text>
+    <line x1="0" y1="30" x2="250" y2="30" stroke="#38bdf8" stroke-width="1"/>
+    <text x="12" y="48" fill="#cbd5e1" font-size="11">- ders: Ders</text>
+    <text x="12" y="64" fill="#cbd5e1" font-size="11">- derslik: Derslik</text>
+    <text x="12" y="80" fill="#cbd5e1" font-size="11">- zamanDilimi: ZamanDilimi</text>
+    <line x1="0" y1="90" x2="250" y2="90" stroke="#334155" stroke-width="1"/>
+    <text x="12" y="108" fill="#93c5fd" font-size="11">+ getDers(): Ders</text>
+    <text x="12" y="124" fill="#93c5fd" font-size="11">+ getDerslik(): Derslik</text>
+    <text x="12" y="140" fill="#93c5fd" font-size="11">+ toString(): String</text>
+  </g>
+
+  <!-- ==================== PATTERNS ==================== -->
+
+  <!-- VeriDeposu (Singleton) -->
+  <g transform="translate(860, 150)" filter="url(#shadow)">
+    <rect width="240" height="230" rx="8" fill="#1e293b" stroke="#2563eb" stroke-width="1.8"/>
+    <path d="M 0,8 Q 0,0 8,0 L 232,0 Q 240,0 240,8 L 240,34 L 0,34 Z" fill="url(#headerGradPatterns)" />
+    <text x="120" y="16" fill="#bfdbfe" font-size="10" font-weight="600" text-anchor="middle">&lt;&lt;Singleton&gt;&gt;</text>
+    <text x="120" y="29" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">VeriDeposu</text>
+    <line x1="0" y1="34" x2="240" y2="34" stroke="#2563eb" stroke-width="1"/>
+    <text x="12" y="52" fill="#cbd5e1" font-size="11">- tekOrnek: VeriDeposu (static)</text>
+    <text x="12" y="68" fill="#cbd5e1" font-size="11">- dersler: List&lt;Ders&gt;</text>
+    <text x="12" y="84" fill="#cbd5e1" font-size="11">- derslikler: List&lt;Derslik&gt;</text>
+    <text x="12" y="100" fill="#cbd5e1" font-size="11">- ogretimElemanlari: List</text>
+    <line x1="0" y1="108" x2="240" y2="108" stroke="#334155" stroke-width="1"/>
+    <text x="12" y="126" fill="#60a5fa" font-size="11" font-weight="bold">+ getInstance(): VeriDeposu</text>
+    <text x="12" y="142" fill="#93c5fd" font-size="11">+ derEkle(d: Ders): void</text>
+    <text x="12" y="158" fill="#93c5fd" font-size="11">+ derslikEkle(d: Derslik): void</text>
+    <text x="12" y="174" fill="#93c5fd" font-size="11">+ ogretimElemaniEkle(oe): void</text>
+    <text x="12" y="190" fill="#93c5fd" font-size="11">+ getDersler(): List&lt;Ders&gt;</text>
+    <text x="12" y="206" fill="#93c5fd" font-size="11">+ tumunuTemizle(): void</text>
+  </g>
+
+  <!-- DerslikFactory -->
+  <g transform="translate(860, 440)" filter="url(#shadow)">
+    <rect width="240" height="110" rx="8" fill="#1e293b" stroke="#2563eb" stroke-width="1.8"/>
+    <path d="M 0,8 Q 0,0 8,0 L 232,0 Q 240,0 240,8 L 240,34 L 0,34 Z" fill="url(#headerGradPatterns)" />
+    <text x="120" y="16" fill="#bfdbfe" font-size="10" font-weight="600" text-anchor="middle">&lt;&lt;Factory&gt;&gt;</text>
+    <text x="120" y="29" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">DerslikFactory</text>
+    <line x1="0" y1="34" x2="240" y2="34" stroke="#2563eb" stroke-width="1"/>
+    <text x="12" y="55" fill="#94a3b8" font-size="11" font-style="italic">// Factory Method Pattern</text>
+    <line x1="0" y1="64" x2="240" y2="64" stroke="#334155" stroke-width="1"/>
+    <text x="12" y="82" fill="#60a5fa" font-size="11" font-weight="bold">+ olustur(tur, kod, kap): Derslik</text>
+    <text x="12" y="98" fill="#94a3b8" font-size="10">throws IllegalArgumentException</text>
+  </g>
+
+  <!-- ==================== IO ==================== -->
+
+  <!-- KaliciDepolamaServisi (Interface) -->
+  <g transform="translate(1160, 150)" filter="url(#shadow)">
+    <rect width="260" height="115" rx="8" fill="#1e293b" stroke="#c084fc" stroke-width="1.8"/>
+    <path d="M 0,8 Q 0,0 8,0 L 252,0 Q 260,0 260,8 L 260,34 L 0,34 Z" fill="url(#headerGradIo)" />
+    <text x="130" y="16" fill="#f5d0fe" font-size="10" font-style="italic" text-anchor="middle">&lt;&lt;interface&gt;&gt;</text>
+    <text x="130" y="29" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">KaliciDepolamaServisi</text>
+    <line x1="0" y1="34" x2="260" y2="34" stroke="#c084fc" stroke-width="1"/>
+    <text x="12" y="55" fill="#94a3b8" font-size="11" font-style="italic">// Abstraction / DIP Sözleşmesi</text>
+    <line x1="0" y1="64" x2="260" y2="64" stroke="#334155" stroke-width="1"/>
+    <text x="12" y="84" fill="#c084fc" font-size="11" font-style="italic">+ kaydet()*: void throws IOException</text>
+    <text x="12" y="102" fill="#c084fc" font-size="11" font-style="italic">+ yukle()*: void throws IOException</text>
+  </g>
+
+  <!-- CsvDepolamaServisi -->
+  <g transform="translate(1160, 330)" filter="url(#shadow)">
+    <rect width="260" height="230" rx="8" fill="#1e293b" stroke="#c084fc" stroke-width="1.5"/>
+    <path d="M 0,8 Q 0,0 8,0 L 252,0 Q 260,0 260,8 L 260,30 L 0,30 Z" fill="url(#headerGradIo)" />
+    <text x="130" y="21" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">CsvDepolamaServisi</text>
+    <line x1="0" y1="30" x2="260" y2="30" stroke="#c084fc" stroke-width="1"/>
+    <text x="12" y="48" fill="#cbd5e1" font-size="11">- VERI_KLASORU: String</text>
+    <text x="12" y="64" fill="#cbd5e1" font-size="11">- HOCA_DOSYASI: String</text>
+    <text x="12" y="80" fill="#cbd5e1" font-size="11">- DERSLIK_DOSYASI: String</text>
+    <text x="12" y="96" fill="#cbd5e1" font-size="11">- DERS_DOSYASI: String</text>
+    <line x1="0" y1="104" x2="260" y2="104" stroke="#334155" stroke-width="1"/>
+    <text x="12" y="122" fill="#c084fc" font-size="11">+ kaydet(): void</text>
+    <text x="12" y="138" fill="#c084fc" font-size="11">+ yukle(): void</text>
+    <text x="12" y="154" fill="#93c5fd" font-size="10">- hocalariKaydet(list): void</text>
+    <text x="12" y="170" fill="#93c5fd" font-size="10">- derslikleriKaydet(list): void</text>
+    <text x="12" y="186" fill="#93c5fd" font-size="10">- dersleriKaydet(list): void</text>
+    <text x="12" y="202" fill="#93c5fd" font-size="10">- kacis(deger: String): String</text>
+  </g>
+
+  <!-- ==================== SERVICES & UI ==================== -->
+
+  <!-- DersPlanlayici (Algoritma) -->
+  <g transform="translate(860, 710)" filter="url(#shadow)">
+    <rect width="250" height="190" rx="8" fill="#1e293b" stroke="#16a34a" stroke-width="1.8"/>
+    <path d="M 0,8 Q 0,0 8,0 L 242,0 Q 250,0 250,8 L 250,34 L 0,34 Z" fill="url(#headerGradServices)" />
+    <text x="125" y="16" fill="#bbf7d0" font-size="10" font-weight="600" text-anchor="middle">&lt;&lt;Algorithm&gt;&gt;</text>
+    <text x="125" y="29" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">DersPlanlayici</text>
+    <line x1="0" y1="34" x2="250" y2="34" stroke="#16a34a" stroke-width="1"/>
+    <text x="12" y="52" fill="#cbd5e1" font-size="11">- atamaListesi: List&lt;AtamaKaydi&gt;</text>
+    <text x="12" y="68" fill="#cbd5e1" font-size="11">- doluHocaZamanlari: Set&lt;String&gt;</text>
+    <text x="12" y="84" fill="#cbd5e1" font-size="11">- doluDerslikZamanlari: Set&lt;String&gt;</text>
+    <text x="12" y="100" fill="#cbd5e1" font-size="11">- haftalikSaatler: List&lt;ZamanDilimi&gt;</text>
+    <line x1="0" y1="108" x2="250" y2="108" stroke="#334155" stroke-width="1"/>
+    <text x="12" y="128" fill="#4ade80" font-size="11" font-weight="bold">+ planla(dersler, derslikler): List</text>
+    <text x="12" y="146" fill="#94a3b8" font-size="10">- varsayilanZamanDilimleri()</text>
+    <text x="12" y="166" fill="#94a3b8" font-size="10" font-style="italic">O(1) Hash Map Çakışma Önleme</text>
+  </g>
+
+  <!-- UygulamaServisi (Facade) -->
+  <g transform="translate(1150, 710)" filter="url(#shadow)">
+    <rect width="280" height="260" rx="8" fill="#1e293b" stroke="#16a34a" stroke-width="1.8"/>
+    <path d="M 0,8 Q 0,0 8,0 L 272,0 Q 280,0 280,8 L 280,34 L 0,34 Z" fill="url(#headerGradServices)" />
+    <text x="140" y="16" fill="#bbf7d0" font-size="10" font-weight="600" text-anchor="middle">&lt;&lt;Facade&gt;&gt;</text>
+    <text x="140" y="29" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">UygulamaServisi</text>
+    <line x1="0" y1="34" x2="280" y2="34" stroke="#16a34a" stroke-width="1"/>
+    <text x="12" y="52" fill="#cbd5e1" font-size="11">- depolamaServisi: KaliciDepolama</text>
+    <text x="12" y="68" fill="#cbd5e1" font-size="11">- veriDeposu: VeriDeposu</text>
+    <text x="12" y="84" fill="#cbd5e1" font-size="11">- planlayici: DersPlanlayici</text>
+    <line x1="0" y1="92" x2="280" y2="92" stroke="#334155" stroke-width="1"/>
+    <text x="12" y="110" fill="#4ade80" font-size="11">+ baslat() / kapat(): void</text>
+    <text x="12" y="126" fill="#93c5fd" font-size="11">+ ogretimElemaniEkle(...): void</text>
+    <text x="12" y="142" fill="#93c5fd" font-size="11">+ ogretimElemanlariListele(): void</text>
+    <text x="12" y="158" fill="#93c5fd" font-size="11">+ derslikEkle(...): void</text>
+    <text x="12" y="174" fill="#93c5fd" font-size="11">+ dersliklerListele(): void</text>
+    <text x="12" y="190" fill="#93c5fd" font-size="11">+ dersEkle(...): void</text>
+    <text x="12" y="206" fill="#93c5fd" font-size="11">+ planOlustur(): List&lt;AtamaKaydi&gt;</text>
+    <text x="12" y="222" fill="#93c5fd" font-size="11">+ manuelKaydet() / manuelYukle()</text>
+  </g>
+
+  <!-- KonsolMenu -->
+  <g transform="translate(1150, 1000)" filter="url(#shadow)">
+    <rect width="280" height="75" rx="8" fill="#1e293b" stroke="#ea580c" stroke-width="1.8"/>
+    <path d="M 0,8 Q 0,0 8,0 L 272,0 Q 280,0 280,8 L 280,28 L 0,28 Z" fill="url(#headerGradUi)" />
+    <text x="140" y="19" fill="#f8fafc" font-size="13" font-weight="bold" text-anchor="middle">ui.KonsolMenu</text>
+    <line x1="0" y1="28" x2="280" y2="28" stroke="#ea580c" stroke-width="1"/>
+    <text x="12" y="46" fill="#cbd5e1" font-size="11">+ main(args: String[]): void</text>
+    <text x="12" y="62" fill="#fdba74" font-size="11">- menuGoster(), formMetotlari()</text>
+  </g>
+
+  <!-- ==================== CONNECTIONS / ARROWS ==================== -->
+
+  <!-- Inheritance: Kullanici <|-- OgretimElemani -->
+  <path d="M 155,340 L 155,292" fill="none" stroke="#38bdf8" stroke-width="1.8" marker-end="url(#inherits)" />
+
+  <!-- Inheritance: Derslik <|-- Amfi -->
+  <path d="M 140,780 L 140,722" fill="none" stroke="#38bdf8" stroke-width="1.8" marker-end="url(#inherits)" />
+
+  <!-- Inheritance: Derslik <|-- Laboratuvar -->
+  <path d="M 320,780 L 320,740 L 210,740 L 210,722" fill="none" stroke="#38bdf8" stroke-width="1.8" marker-end="url(#inherits)" />
+
+  <!-- Realization: KaliciDepolamaServisi <|.. CsvDepolamaServisi -->
+  <path d="M 1290,330 L 1290,277" fill="none" stroke="#c084fc" stroke-width="1.8" stroke-dasharray="4 4" marker-end="url(#implements)" />
+
+  <!-- Association: Ders -> OgretimElemani -->
+  <path d="M 310,400 L 260,400" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)" />
+  <text x="270" y="392" fill="#94a3b8" font-size="10">1</text>
+
+  <!-- Association: AtamaKaydi -> Ders, Derslik, ZamanDilimi -->
+  <path d="M 540,560 L 540,505" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)" />
+  <path d="M 480,630 L 310,630" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)" />
+  <path d="M 680,560 L 680,465" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)" />
+
+  <!-- Dependency: DerslikFactory -> Derslik -->
+  <path d="M 860,490 L 200,490 L 200,550" fill="none" stroke="#60a5fa" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#arrow)" />
+  <text x="450" y="482" fill="#60a5fa" font-size="11" font-weight="600">&lt;&lt;creates Derslik&gt;&gt;</text>
+
+  <!-- Association: UygulamaServisi -> DersPlanlayici, VeriDeposu, KaliciDepolamaServisi -->
+  <path d="M 1150,800 L 1120,800" fill="none" stroke="#4ade80" stroke-width="1.5" marker-end="url(#arrow)" />
+  <path d="M 1230,710 L 1230,620 L 1000,620 L 1000,390" fill="none" stroke="#4ade80" stroke-width="1.5" marker-end="url(#arrow)" />
+  <path d="M 1320,710 L 1320,277" fill="none" stroke="#4ade80" stroke-width="1.5" marker-end="url(#arrow)" />
+
+  <!-- UI -> UygulamaServisi -->
+  <path d="M 1290,1000 L 1290,980" fill="none" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arrow)" />
+
+</svg>
+
