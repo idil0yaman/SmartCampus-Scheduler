@@ -1,40 +1,23 @@
 package io;
 
-/*
- * ============================================================
- *  SOYUTLAMA (Abstraction) — NYP & SOLID
- * ============================================================
- *
- *  SOLID — Interface Segregation Principle (ISP):
- *  Bu arayüz yalnızca "kaydet" ve "yukle" metodlarını tanımlar.
- *  Her servis kendi ihtiyacına göre yalnızca bu sözleşmeyi
- *  uygular; gereksiz metotlara bağımlı olmaz.
- *
- *  SOLID — Dependency Inversion Principle (DIP):
- *  Üst katman sınıflar (servisler, menüler) somut CSV/JSON
- *  sınıflarına değil, bu soyut arayüze bağlanır.  Böylece
- *  kayıt formatı değiştiğinde üst katman kodu değişmez;
- *  sadece bu arayüzü uygulayan yeni bir sınıf yazılır.
- * ============================================================
- */
+import java.io.IOException;
 
 /**
- * Kalıcı veri saklama için genel sözleşme (contract).
- * Tüm okuma/yazma sınıfları bu arayüzü uygulamalıdır.
+ * Verilerin kalıcı olarak saklanması ve geri yüklenmesi için
+ * kullanılan arayüz. Bu sayede servis katmanı doğrudan somut dosya
+ * sınıflarına bağlanmak yerine bu sözleşmeye bağlanır (Dependency Inversion).
  */
 public interface KaliciDepolamaServisi {
 
     /**
-     * Uygulama verilerini kalıcı ortama yazar.
-     *
-     * @throws java.io.IOException yazma hatası durumunda
+     * Verileri kalıcı ortama kaydeder.
+     * @throws IOException G/Ç hatası durumunda
      */
-    void kaydet() throws java.io.IOException;
+    void kaydet() throws IOException;
 
     /**
      * Kalıcı ortamdan verileri okuyup belleğe yükler.
-     *
-     * @throws java.io.IOException okuma hatası durumunda
+     * @throws IOException G/Ç hatası durumunda
      */
-    void yukle() throws java.io.IOException;
+    void yukle() throws IOException;
 }
